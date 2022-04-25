@@ -3,4 +3,11 @@ project(tokoin)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(tokoin src/main.cpp)
+file(GLOB boost_lib
+    "*.h"
+    "*.hpp"
+    "*.c"
+    "*.cpp"
+)
+
+add_executable(tokoin src/main.cpp ${boost_lib})

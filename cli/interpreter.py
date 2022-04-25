@@ -16,6 +16,7 @@
 #
 
 from cli_assets import TermColors
+import commands
 import sys
 
 class Interpreter:
@@ -72,6 +73,6 @@ class _CommandTemplate:
 # MAIN
 def main():
     interpreter: Interpreter = Interpreter()
-    
+
 if __name__ == "__main__":
     main()
