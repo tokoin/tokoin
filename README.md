@@ -16,6 +16,6 @@ Tokoin is a scratch built cryptocurrency made for being a real currency! What do
 about Bitcoin, Ethereum, etc. about Bitcoin, Ethereum, Dogecoin, etc. is that these are not really currencies but rather objects of speculation.
 And that is not the fault of these currencies, they have been made purely speculative by capitalism, which in no way reflects the true idea behind cryptocurrencies.
 
-# Usage
+## Usage
 In theory, you can just invest all your money in this cryptocurrency and simply keep the price at the same value due to the algorithm.
 IMPORTANT! Right is VERY important to remember that if there is a bug in the algorithm then all your money is just gone! So don't do that!
