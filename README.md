@@ -1,5 +1,5 @@
 <h1 align="center">
-SaentisCoin - Core Application
+Tokoin - Core Application
 <br/><br/>
 <img src="https://static.tumblr.com/ppdj5y9/Ae9mxmxtp/300coin.png" alt="Dogecoin" width="300"/>
 </h1>
@@ -12,7 +12,7 @@ SaentisCoin - Core Application
 </div>
 
 ## What is it?
-SaentisCoin is a cryptocurrency made by the Saentis Family Office GmbH (<https://www.saentis-fo.de/>).
-Anything that you can buy in this network with normal money, you can just as easily buy with SaentisCoins.
-But there is also nothing wrong with simply using the coin in other areas.
+Tokoin is a scratch built cryptocurrency made for being a real currency! What do i mean with real? Well, the thing
+about Bitcoin, Ethereum, etc. about Bitcoin, Ethereum, Dogecoin, etc. is that these are not really currencies but rather objects of speculation.
+And that is not the fault of these currencies, they have been made purely speculative by capitalism, which in no way reflects the true idea behind cryptocurrencies.
 
