@@ -1,3 +1,6 @@
 [submodule "vendor-src/spdlog"]
 	path = vendor-src/spdlog
 	url = https://github.com/gabime/spdlog.git
+[submodule "vendor-src/asio"]
+	path = vendor-src/asio
+	url = https://github.com/boostorg/asio.git

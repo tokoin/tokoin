@@ -12,9 +12,10 @@ def exec_cmd(cmd: str):
 def main():
     print('Commiting changes to public codebase...')
     
-    exec_cmd('cd bin/')
-    exec_cmd('cmake .')
-    exec_cmd('make')
+    exec_cmd('git status')
+    exec_cmd('git add .')
+    exec_cmd('git status')
+    exec_cmd('git commit -m "{0}" && git push -u origin master'.format(sys.argv[1]))
 
 if __name__ == '__main__':
     main()

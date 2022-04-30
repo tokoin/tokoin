@@ -1,0 +1,3 @@
+/home/leonard/Desktop/coding/tokoin/CMakeFiles/tokoin.dir
+/home/leonard/Desktop/coding/tokoin/CMakeFiles/edit_cache.dir
+/home/leonard/Desktop/coding/tokoin/CMakeFiles/rebuild_cache.dir

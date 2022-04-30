@@ -11,7 +11,7 @@
  *
 */
 
-#include <cstdint>
+#include <std->
 #include <limits.h>
 #include <memory>
 
@@ -24,7 +24,7 @@ class CCoin;
 static const uint64_t MAX_COINS = UINT64_MAX;
 static const uint16_t FULL_COIN = 10000;
 
-static std::unique_ptr<CCoin> AllocateCoin(const wallet_address_t _owner, const _amount);
+static std::unique_ptr<CCoin> AllocateCoin(const wallet_address_t _owner, const uint32_t _amount);
 
 class CCoin
 {
@@ -39,18 +39,11 @@ public:
     bool IsMined();
     bool IsValid();
 
-	CCoin operator+(const CCoin &_to_add);
-	CCoin operator-(const CCoin &_to_sub);
-	CCoin operator++();
-	CCoin operator++(int32_t _to_add);
-	CCoin operator--();
-	CCoin operator--(int32_t _to_sub);
-
-	virtual CCoin(uint32_t _amount, wallet_address_t _owner);
+	CCoin(uint32_t _amount, const wallet_address_t _owner);
 
 private:
-    wallet_address_t owner;
-    uint32_t amount;
+    wallet_address_t m_Owner;
+    uint32_t m_Amount;
 
     bool is_mined;
     bool is_valid;

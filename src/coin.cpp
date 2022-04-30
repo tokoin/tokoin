@@ -12,20 +12,21 @@
 */
 
 #include "coin.h"
+#include <iostream>
 
 
 // GETTERS & SETTERS
-uint32_t Currency::CCoin::GetAmount() { return amount; }
-wallet_address_t Currency::CCoin::GetOwner() { return owner };
+uint32_t Currency::CCoin::GetAmount() { return m_Amount; }
+Currency::wallet_address_t Currency::CCoin::GetOwner() { return m_Owner; };
 
 void Currency::CCoin::SetNewOwner(const wallet_address_t _new_owner) 
 {
-	this.SetNewOwner(_new_owner);
+	this->SetNewOwner(_new_owner);
 }
 
 void Currency::CCoin::DeleteCoins() 
 {
-	delete *this;
+	delete this;
 }
 
 void Currency::CCoin::CheckValidation() 
@@ -33,49 +34,14 @@ void Currency::CCoin::CheckValidation()
 	
 }
 
-Currency::CCoin::operator+(const Currency::CCoin &_to_add)
+static std::unique_ptr<Currency::CCoin> Currency::AllocateCoin(const wallet_address_t _owner, const uint32_t _amount)
 {
-    Currency::CCoin res;
-    res.amount += _to_add.GetAmount();
-	return res;
-}
-
-Currency::Coin::operator-(const Currency::CCoin &_to_sub)
-{
-	Currency::CCoin res;
-	res.amount -= _to_sub.GetAmount();
-	return res;
-}
-
-std::unique_ptr<Currency::CCoin> Currency::AllocateCoin()
-{
-	std::unique_ptr<Currency::CCoin> allocated_coin(new Currency::CCoin());
+	std::unique_ptr<Currency::CCoin> allocated_coin(new Currency::CCoin(_owner, _amount));
 	return allocated_coin;
 }
 
-virtual Currency::CCoin(uint32_t _amount, wallet_address_t _owner)
+Currency::CCoin(uint32_t _amount, const Currency::wallet_address_t _owner);
 {
-	this->amount = _amount;
-	this->owner = _owner;
+	this->m_Amount = _amount;
+	this->m_Owner = _owner;
 }
-
-// PREFIX INCREMENT
-Currency::CCoin::operator++() { return *this; }
-Currency::CCoin::operator--() { return *this; }
-
-// POSTFIX INCREMENT
-Currency::CCoin::operator++(int32_t _to_add)
-{
-	Currency::CCoin bef_inc = *this;
-	operator++();
-	return bef_inc;
-}
-
-Currency::CCoin::operator--(int32_t _to_sub)
-{
-	Currency::CCoin bef_inc = *this;
-	operator--();
-	return bef_inc;
-}
-
-
