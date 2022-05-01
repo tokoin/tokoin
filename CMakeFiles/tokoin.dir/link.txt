@@ -1,1 +1,0 @@
-/usr/bin/c++ -rdynamic CMakeFiles/tokoin.dir/src/main.cpp.o CMakeFiles/tokoin.dir/src/coin.cpp.o -o tokoin 
