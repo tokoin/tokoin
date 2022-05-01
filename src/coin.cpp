@@ -24,7 +24,7 @@ void Currency::CCoin::SetNewOwner(const wallet_address_t _new_owner)
 	this->SetNewOwner(_new_owner);
 }
 
-void Currency::CCoin::DeleteCoins() 
+void Currency::CCoin::DeleteCoins()
 {
 	delete this;
 }
