@@ -10,4 +10,4 @@ file(GLOB boost_lib
     "*.cpp"
 )
 
-add_executable(tokoin src/main.cpp src/coin.cpp ${boost_lib})
+add_executable(tokoin src/main.cpp src/sha512.cpp ${boost_lib})

@@ -129,30 +129,6 @@ tokoin/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokoin.dir/build.make CMakeFiles/tokoin.dir/build
 .PHONY : tokoin/fast
 
-src/coin.o: src/coin.cpp.o
-.PHONY : src/coin.o
-
-# target to build an object file
-src/coin.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokoin.dir/build.make CMakeFiles/tokoin.dir/src/coin.cpp.o
-.PHONY : src/coin.cpp.o
-
-src/coin.i: src/coin.cpp.i
-.PHONY : src/coin.i
-
-# target to preprocess a source file
-src/coin.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokoin.dir/build.make CMakeFiles/tokoin.dir/src/coin.cpp.i
-.PHONY : src/coin.cpp.i
-
-src/coin.s: src/coin.cpp.s
-.PHONY : src/coin.s
-
-# target to generate assembly for a file
-src/coin.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokoin.dir/build.make CMakeFiles/tokoin.dir/src/coin.cpp.s
-.PHONY : src/coin.cpp.s
-
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -177,6 +153,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokoin.dir/build.make CMakeFiles/tokoin.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/sha512.o: src/sha512.cpp.o
+.PHONY : src/sha512.o
+
+# target to build an object file
+src/sha512.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokoin.dir/build.make CMakeFiles/tokoin.dir/src/sha512.cpp.o
+.PHONY : src/sha512.cpp.o
+
+src/sha512.i: src/sha512.cpp.i
+.PHONY : src/sha512.i
+
+# target to preprocess a source file
+src/sha512.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokoin.dir/build.make CMakeFiles/tokoin.dir/src/sha512.cpp.i
+.PHONY : src/sha512.cpp.i
+
+src/sha512.s: src/sha512.cpp.s
+.PHONY : src/sha512.s
+
+# target to generate assembly for a file
+src/sha512.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tokoin.dir/build.make CMakeFiles/tokoin.dir/src/sha512.cpp.s
+.PHONY : src/sha512.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tokoin"
-	@echo "... src/coin.o"
-	@echo "... src/coin.i"
-	@echo "... src/coin.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/sha512.o"
+	@echo "... src/sha512.i"
+	@echo "... src/sha512.s"
 .PHONY : help
 
 

@@ -11,7 +11,7 @@
  *
 */
 
-#include <std-uintn.h>
+#include <stdint.h>
 #include <limits.h>
 #include <memory>
 

@@ -12,11 +12,13 @@
 */
 
 #include <iostream>
+#include <memory>
 #include "coin.h"
+
 
 void TestCoin()
 {
-	std::unique_ptr<Currency::CCoin> test_coin(new Currency::CCoin(0x09318F82A, 20));
+	std::unique_ptr<Currency::CCoin> test_coin = std::make_unique<Currency::CCoin>(0x09318F82A, 20);
 
 	std::cout << "======= TEST COIN STATS =======" << "\n";
 	std::cout << "Amount: " << test_coin->GetAmount() << "\n";
@@ -29,3 +31,4 @@ int main(int argc, char* argv[])
 	TestCoin();
     return 0;
 }
+

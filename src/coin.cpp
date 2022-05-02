@@ -40,7 +40,7 @@ static std::unique_ptr<Currency::CCoin> Currency::AllocateCoin(const wallet_addr
 	return allocated_coin;
 }
 
-Currency::CCoin(uint32_t _amount, const Currency::wallet_address_t _owner);
+Currency::CCoin(const uint32_t _amount, const Currency::wallet_address_t _owner);
 {
 	this->m_Amount = _amount;
 	this->m_Owner = _owner;
