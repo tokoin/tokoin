@@ -12,10 +12,15 @@ Tokoin - Core Application
 </div>
 
 ## What is it?
-Tokoin is a scratch built cryptocurrency made for being a real currency! What do i mean with real? Well, the thing
-about Bitcoin, Ethereum, etc. about Bitcoin, Ethereum, Dogecoin, etc. is that these are not really currencies but rather objects of speculation.
-And that is not the fault of these currencies, they have been made purely speculative by capitalism, which in no way reflects the true idea behind cryptocurrencies.
+Tokoin is just a cryptocurrency made for fun, just a hobby. It's a Peer-To-Peer electronic cash system built with C++. 
+It's scratch built and based on cryptographic systems. It uses hashing to protect manipulations on the blockchain, and RSA encryption 
+method for Peer-To-Peer encryption.
 
 ## Usage
-In theory, you can just invest all your money in this cryptocurrency and simply keep the price at the same value due to the algorithm.
-IMPORTANT! Right is VERY important to remember that if there is a bug in the algorithm then all your money is just gone! So don't do that!
+It has no actual usage. I don't want you to invest your money in it or something like that. Like I said it's just a hobby project.
+
+## Development Goals
+- [x] Implement hashing
+- [x] Implement RSA encryption method
+- [ ] Implement Networking
+- [ ] Implement GUI
