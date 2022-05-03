@@ -13,22 +13,22 @@
 
 #include <iostream>
 #include <memory>
-#include "coin.h"
-
 
 void TestCoin()
 {
+	/*
 	std::unique_ptr<Currency::CCoin> test_coin = std::make_unique<Currency::CCoin>(0x09318F82A, 20);
 
 	std::cout << "======= TEST COIN STATS =======" << "\n";
 	std::cout << "Amount: " << test_coin->GetAmount() << "\n";
 	std::cout << "Owner: " << test_coin->GetOwner() << "\n";
 	std::cout << "===============================" << "\n";
+	*/
 }
 
 int main(int argc, char* argv[])
 {
-	TestCoin();
+	//TestCoin();
     return 0;
 }
 

@@ -72,12 +72,12 @@ namespace RSA
         std::ifstream is (path_in);
         if (!is.is_open())
         {
-            throw std::runtime_error("Arquivo de entrada inexistente\n");
+            throw std::runtime_error("ERR: Encoder is not open!\n");
         }
         std::ofstream os (path_out);
         if (!os.is_open())
         {
-            throw std::runtime_error("Arquivo de saída inexistente\n");
+            throw std::runtime_error("ERR: Path not found!\n");
         }
         
         boost::multiprecision::uint1024_t k1 = public_key_1, k2 = public_key_2;
@@ -126,12 +126,12 @@ namespace RSA
         std::ifstream is (path_in);
         if (!is.is_open())
         {
-            throw std::runtime_error("Arquivo de entrada inexistente\n");
+            throw std::runtime_error("Cannot open Encoder!\n");
         }
         std::ofstream os (path_out);
         if (!os.is_open())
         {
-            throw std::runtime_error("Arquivo de saída inexistente\n");
+            throw std::runtime_error("Unable to enter path!\n");
         }
 
         boost::multiprecision::uint1024_t k1 = public_key;
