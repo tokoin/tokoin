@@ -12,7 +12,7 @@ Tokoin - Core Application
 </div>
 
 ## What is it?
-Tokoin is just a cryptocurrency made for fun, just a hobby. It's a Peer-To-Peer electronic cash system built with C++. 
+Tokoin is just a cryptocurrency made for fun, just a hobby. It's a Peer-To-Peer electronic cash system built with C++ 
 It's scratch built and based on cryptographic systems. It uses hashing to protect manipulations on the blockchain, and RSA encryption 
 method for Peer-To-Peer encryption.
 
