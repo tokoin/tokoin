@@ -11,6 +11,8 @@
  *
 */
 
+#ifndef _TK_MAIN_
+#define _TK_MAIN_
 namespace Currency
 {
 
@@ -26,4 +28,9 @@ class CTestNetwork;
 
 typedef unsigned int wallet_address_t;
 
+#define TK_VERSION 0.01
+
 };
+
+#endif
+
