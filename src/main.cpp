@@ -17,7 +17,7 @@
 
 void help_map()
 {
-	FILE* dest = stderr;
+ 	FILE* dest = stderr;
 	
 	fprintf(dest, "tokoin: [options] file\n");
 	fprintf(dest, "	  -h	Shows this help map\n");
