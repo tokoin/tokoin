@@ -15,7 +15,15 @@
 #include <memory>
 
 
-void help_map()
+//
+// Top level defines
+//
+extern char** environ;
+//
+// END
+//
+
+void HelpMap()
 {
  	FILE* dest = stderr;
 	
@@ -27,12 +35,17 @@ void help_map()
 	exit(1);
 }
 
+void LoadWallet(char* path)
+{
+
+}
+
 int main(int argc, char* argv[])
 {
 	if (argc < 2)
 	{
 		std::cerr << "Invalid arguments!" << std::endl;
-		help_map();
+		HelpMap();
 	}
 
 	int i;
@@ -53,7 +66,7 @@ int main(int argc, char* argv[])
 				/*
 				 * Shows the help map
 				*/
-				help_map();
+				HelpMap();
 				break;
 			case 'v':
 				/*
@@ -63,12 +76,16 @@ int main(int argc, char* argv[])
 				break;
 
 			default:
-				std:cerr << "Invalid argument: '-" << argv[i][1] << "'";
-				return 1;	
+				goto invalid_arg;
 			}
 		}
 		i++;
 	}
+
+invalid_arg:
+	HelpMap();
+	std:cerr << "Invalid argument: '-" << argv[i][1] << "'";
+	return 1;	
 
 	return 0;
 }
