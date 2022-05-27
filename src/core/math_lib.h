@@ -11,9 +11,13 @@
  *
 */
 
+#include <stdbool.h>
+
 namespace Math
 {
     int gcd(int a, int b);
     int lcm(int a, int b);
     inline float Square(float num);
+	bool is_prime(int p);
+	int inverse_mod(int a, int m);
 };

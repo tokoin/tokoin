@@ -13,7 +13,10 @@
 
 #include "math_lib.h"
 
-inline float Math::Square(float num) { return num*num; }
+
+inline float Math::Square(float num) { 
+	return num*num; 
+}
 
 int Math::gcd(int a, int b)
 {
@@ -44,3 +47,25 @@ int Math::lcm(int a, int b)
         curr_lcm += 1;
     }
 }
+
+int Math::mod_inverse(int a, int m)
+{
+	for (int x = 1; x < m; x++)
+	{
+		if (((a % m) * (x % m)) % m == 1)
+			return x;
+	}
+	return -1;
+}
+
+bool Math::is_prime(int p)
+{
+	for (int i = 0; i < p; i++)
+	{
+		if (p % i == 0)
+			return true;
+	}
+	return false;
+}
+
+
