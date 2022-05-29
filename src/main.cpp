@@ -15,13 +15,7 @@
 #include <memory>
 
 
-//
-// Top level defines
-//
 extern char** environ;
-//
-// END
-//
 
 void HelpMap(FILE* dest)
 {
