@@ -23,21 +23,29 @@ extern char** environ;
 // END
 //
 
-void HelpMap()
+void HelpMap(FILE* dest)
 {
- 	FILE* dest = stderr;
-	
 	fprintf(dest, "tokoin: [options] file\n");
 	fprintf(dest, "	  -h	Shows this help map\n");
 	fprintf(dest, "   -v    Shows version of tokoin\n");
 	fprintf(dest, "   -g    Start gui\n");
 	
-	exit(1);
+	dest == stderr ? exit(1) : exit(0);
 }
 
-void LoadWallet(char* path)
+int ParseArgs(int argc, char* argv[])
 {
-
+	int i=1;	
+	while (i < argc)
+	{
+		if (argv[i][0] != '-')
+		{
+			fprintf(stderr, "Invalid argument: %s", argv[i]);
+			HelpMap(stderr);
+			return 1;
+		}
+		i++;
+	}
 }
 
 int main(int argc, char* argv[])
@@ -45,47 +53,10 @@ int main(int argc, char* argv[])
 	if (argc < 2)
 	{
 		std::cerr << "Invalid arguments!" << std::endl;
-		HelpMap();
+		HelpMap(stderr);
 	}
 
-	int i;
-	bool launch_gui = false;
-	while (i < argc)
-	{
-		if (argv[i][0] == "-")
-		{
-			switch (argv[i][1])
-			{
-			case 'g':
-				/*
-				 * Open program in GUI
-				*/
-				launch_gui = true;
-				break;
-			case 'h':
-				/*
-				 * Shows the help map
-				*/
-				HelpMap();
-				break;
-			case 'v':
-				/*
-				 * Shows the version
-				*/
-				printf("Tokoin Version: %s\n", TK_VERSION);
-				break;
-
-			default:
-				goto invalid_arg;
-			}
-		}
-		i++;
-	}
-
-invalid_arg:
-	HelpMap();
-	std:cerr << "Invalid argument: '-" << argv[i][1] << "'";
-	return 1;	
+	ParseArgs( argc, argv );
 
 	return 0;
 }
